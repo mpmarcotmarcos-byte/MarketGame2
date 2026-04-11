@@ -2,7 +2,10 @@ package com.example.marketgame
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,6 +25,24 @@ class Login : AppCompatActivity() {
         }
 
         val tvCadastro = findViewById<TextView>(R.id.tvCadastro)
+        val btnLogin = findViewById<Button>(R.id.btnLogin)
+        val etEmail = findViewById<EditText>(R.id.etEmail)
+        val etSenha = findViewById<EditText>(R.id.etSenha)
+
+        fun verificacaoLogin() {
+            val email = etEmail.text.toString()
+            val senha = etSenha.text.toString()
+
+            if (email == "teste@gmail.com" && senha == "123") {
+                Toast.makeText(this, "Login realizado com sucesso", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Email ou senha invalidos", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        btnLogin.setOnClickListener {
+            verificacaoLogin()
+        }
 
         tvCadastro.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
