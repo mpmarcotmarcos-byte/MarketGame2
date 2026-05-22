@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MarketGame">
         <activity
+            android:name=".ListaJogos"
+            android:exported="false" />
+        <activity
             android:name=".Login"
             android:exported="false" />
         <activity

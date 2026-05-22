@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- TOPO -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#0057B8"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:hint=" busque aqui"
+            android:background="#FFFFFF"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+    <!-- CONTEÚDO -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- BANNER -->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@drawable/banner1"
+                android:scaleType="centerCrop"/>
+
+            <!-- TITULO -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BattleField"
+                android:textStyle="bold"
+                android:textColor="#FF6600"
+                android:textSize="28sp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$80,00"
+                android:textColor="#FF6600"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/banner3"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dayz"
+                android:textStyle="bold"
+                android:textColor="#FF6600"
+                android:textSize="28sp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$100,00"
+                android:textColor="#FF6600"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+
+
+
+            <!-- CARD PRODUTO -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnComprar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="COMPRAR"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#FF6600"
+                    android:layout_marginTop="14dp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:src="@drawable/banner2"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CyberPunk"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$50,00"
+                    android:textColor="#FF6600"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"/>
+
+                <Button
+                    android:id="@+id/btnComprar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="COMPRAR"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#FF6600"
+                    android:layout_marginTop="14dp"/>
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:src="@drawable/banner4"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BattleField 1"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$49,90"
+                    android:textColor="#FF6600"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"/>
+
+                <Button
+                    android:id="@+id/btnComprar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="COMPRAR"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#FF6600"
+                    android:layout_marginTop="14dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- MENU INFERIOR -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#0057B8"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Home"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Categorias"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Favoritos"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Conta"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+</LinearLayout>
