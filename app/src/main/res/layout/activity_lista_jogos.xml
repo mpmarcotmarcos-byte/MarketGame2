@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<LinearLayout
+    android:id="@+id/listaJogos"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -103,7 +107,7 @@
                 android:layout_marginTop="16dp">
 
                 <Button
-                    android:id="@+id/btnComprar"
+                    android:id="@+id/btnComprar1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="COMPRAR"
@@ -136,7 +140,7 @@
                     android:layout_marginTop="8dp"/>
 
                 <Button
-                    android:id="@+id/btnComprar"
+                    android:id="@+id/btnComprar2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="COMPRAR"
@@ -169,7 +173,7 @@
                     android:layout_marginTop="8dp"/>
 
                 <Button
-                    android:id="@+id/btnComprar"
+                    android:id="@+id/btnComprar3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="COMPRAR"
@@ -210,6 +214,7 @@
             android:textColor="#FFFFFF"/>
 
         <TextView
+            android:id="@+id/btnContaMenu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
