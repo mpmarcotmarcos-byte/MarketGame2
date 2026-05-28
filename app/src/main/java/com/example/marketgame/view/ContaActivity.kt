@@ -8,8 +8,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.marketgame.R
+import com.example.marketgame.databinding.ActivityContaBinding
+import com.example.marketgame.repository.SessaoRepository
 
 class ContaActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityContaBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -20,15 +25,25 @@ class ContaActivity : AppCompatActivity() {
             insets
         }
 
-        val btnSairDaConta = findViewById<TextView>(R.id.btnSairDaConta)
-        val btnVoltar = findViewById<TextView>(R.id.btnVoltar)
+        binding = ActivityContaBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        btnSairDaConta.setOnClickListener {
+        val usuario = SessaoRepository.usuario
+
+        binding.tvUsuarioNome.text = usuario?.nome ?: "Desconhecido"
+        binding.tvEmailVisualizar.text = "Email: " + (usuario?.email ?: "Email não cadastrado")
+        binding.tvTelefoneVisualizar.text = "Telefone: " + (usuario?.telefone ?: "Telefone não cadastrado")
+        binding.tvCpfVisualizar.text = "CPF: " + (usuario?.cpf ?: "CPF não cadastrado")
+        binding.tvEnderecoVisualizar.text = "Endereço: " + (usuario?.endereco ?: "Endereço não cadastrado")
+        binding.tvCidadeVisualizar.text = "Cidade: " + (usuario?.cidade ?: "Cidade não cadastrado")
+        binding.tvEstadoVisualizar.text = "Estado: " + (usuario?.estado ?: "Estado não encontrado")
+
+        binding.btnSairDaConta.setOnClickListener {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
 
-        btnVoltar.setOnClickListener {
+        binding.btnVoltar.setOnClickListener {
             val intent = Intent(this, ListaJogos::class.java)
             startActivity(intent)
         }

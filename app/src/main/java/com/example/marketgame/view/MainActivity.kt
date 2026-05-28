@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -34,19 +35,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        fun verificacaoCamposFormularioObrigatorio(campo: EditText): Boolean {
-
-            return if (campo.text.toString().trim().isEmpty()) {
-
-                campo.error = "Campo obrigatório"
-                campo.requestFocus()
-
-                false
-            } else {
-                true
-            }
-        }
-
         fun verificarSenhaEConfirmarSenhaIguais(senha: EditText, confirmarSenha: EditText): Boolean {
             return if (senha.text.toString() != confirmarSenha.text.toString()) {
                 confirmarSenha.error = "Senhas não são iguais"
@@ -58,36 +46,48 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        fun verificarCamposVazios(): Boolean {
+
+            val campos = listOf(
+                binding.etNome,
+                binding.etEmail,
+                binding.etTelefone,
+                binding.etCpf,
+                binding.etEndereco,
+                binding.etCidade,
+                binding.etEstado,
+                binding.etSenha,
+                binding.etConfirmarSenha
+            )
+
+            var valido = true
+
+            campos.forEach { campo ->
+
+                if (campo.text.toString().trim().isEmpty()) {
+
+                    campo.error = "Campo obrigatório"
+
+                    if (valido) {
+                        campo.requestFocus()
+                    }
+
+                    valido = false
+                }
+
+            }
+
+            return valido
+        }
+
         binding.btnCadastrar.setOnClickListener {
-            if (!verificacaoCamposFormularioObrigatorio(binding.etNome))
+            if (!verificarCamposVazios()) {
                 return@setOnClickListener
+            }
 
-            if (!verificacaoCamposFormularioObrigatorio(binding.etEmail))
+            if(!verificarSenhaEConfirmarSenhaIguais(binding.etSenha, binding.etConfirmarSenha)){
                 return@setOnClickListener
-
-            if (!verificacaoCamposFormularioObrigatorio(binding.etTelefone))
-                return@setOnClickListener
-
-            if (!verificacaoCamposFormularioObrigatorio(binding.etCpf))
-                return@setOnClickListener
-
-            if (!verificacaoCamposFormularioObrigatorio(binding.etEndereco))
-                return@setOnClickListener
-
-            if (!verificacaoCamposFormularioObrigatorio(binding.etCidade))
-                return@setOnClickListener
-
-            if (!verificacaoCamposFormularioObrigatorio(binding.etEstado))
-                return@setOnClickListener
-
-            if (!verificacaoCamposFormularioObrigatorio(binding.etSenha))
-                return@setOnClickListener
-
-            if (!verificacaoCamposFormularioObrigatorio(binding.etConfirmarSenha))
-                return@setOnClickListener
-
-            if(!verificarSenhaEConfirmarSenhaIguais(binding.etSenha, binding.etConfirmarSenha))
-                return@setOnClickListener
+            }
 
             val conta = Conta(
                 nome = binding.etNome.text.toString(),
@@ -101,9 +101,17 @@ class MainActivity : AppCompatActivity() {
                 confirmarSenha = binding.etConfirmarSenha.toString()
             )
 
-            Log.d("Log cadastrar informações", "$conta")
-
             ContaRepository.contas.add(conta)
+
+            Toast.makeText(
+                this,
+                "Usuário cadastrado com sucesso",
+                Toast.LENGTH_SHORT
+            ).show()
+
+
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
         }
     }
 }

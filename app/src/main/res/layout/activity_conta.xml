@@ -1,103 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
     android:background="#0B0B0F"
     tools:context=".view.ContaActivity">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Conta"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp">
-
-        </TextView>
-
-        <ImageView
-            android:layout_width="183dp"
-            android:layout_height="181dp"
-            android:src="@drawable/icone_avatar_conta">
-
-        </ImageView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Nome do Individuo"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp">
-        </TextView>
-
         <LinearLayout
-            android:layout_height="wrap_content"
+            android:id="@+id/main"
             android:layout_width="match_parent"
-            android:layout_margin="20dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp">
+
+                <!-- TITULO -->
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="E-mail"></TextView>
+                    android:text="Conta"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp" />
+
+                <!-- AVATAR -->
+
+                <ImageView
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/icone_avatar_conta" />
+
+                <!-- NOME -->
 
                 <TextView
+                    android:id="@+id/tvUsuarioNome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Usuário"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <!-- CARD -->
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Telefone"></TextView>
+                    android:layout_marginTop="30dp"
+                    android:background="#13131A"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dados Pessoais"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvEmailVisualizar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:text="Email"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tvTelefoneVisualizar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Telefone"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tvCpfVisualizar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="CPF"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tvEnderecoVisualizar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Endereço"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tvCidadeVisualizar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Cidade"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tvEstadoVisualizar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Estado"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <!-- BOTAO VOLTAR -->
+
+                <Button
+                    android:id="@+id/btnVoltar"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="#7B2FF7"
+                    android:text="Voltar"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- SAIR -->
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/btnSairDaConta"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CPF"></TextView>
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Sair da conta"
+                    android:textColor="#FF3B30"
+                    android:textSize="18sp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Endereço"></TextView>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Cidade"></TextView>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Estado"></TextView>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/btnVoltar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Voltar"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            ></TextView>
-
-        <TextView
-            android:id="@+id/btnSairDaConta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sair da conta"
-            android:layout_marginTop="20dp"
-            android:textColor="#CD1C18"
-            android:textSize="20sp"></TextView>
-
-    <!--    <Button-->
-    <!--        android:layout_width=""-->
-    <!--        android:layout_height=""-->
-    <!--        android:text="Logout"-->
-    <!--        >-->
-    <!--    </Button>-->
-
-</LinearLayout>
+</ScrollView>
