@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:id="@+id/detalhesCompras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/imgJogo"
+            android:layout_width="318dp"
+            android:layout_height="316dp"
+            android:layout_gravity="center"
+            android:src="@drawable/banner1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="BattleField"
+            android:textColor="#E9E7E7"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="R$80,00"
+            android:textColor="#7B1FA2"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ou 10x de R$ 8,00 sem juros"
+            android:textColor="#E2D8D8"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Descrição"
+            android:textColor="#E7E3E3"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Entre em combates intensos, complete missões emocionantes e enfrente jogadores do mundo inteiro em batalhas épicas. Gráficos de última geração e jogabilidade imersiva."
+            android:textColor="#F4F2F2"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/btnComprar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#8E24AA"
+            android:text="COMPRAR AGORA"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="#8E24AA"
+            android:text="VOLTAR"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>
