@@ -14,29 +14,25 @@
         <activity
             android:name=".view.DetalhesCompras"
             android:exported="false" >
-
-
         </activity>
-
-
         <activity
             android:name=".view.ContaActivity"
             android:exported="false" />
         <activity
             android:name=".view.ListaJogos"
-            android:exported="true" >
-            <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+            android:exported="false" >
+            </activity>
         <activity
             android:name=".view.Login"
             android:exported="false" />
         <activity
             android:name=".view.MainActivity"
-            android:exported="false">
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
